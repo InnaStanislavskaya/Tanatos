@@ -1,0 +1,54 @@
+.services {
+	padding: 10px 0;
+
+	@media (min-width: 992px) {
+		display: flex;
+		flex-direction: row;
+		justify-content: space-between;
+		align-items: flex-start;
+		padding: 50px 0;
+	}
+
+	&__item {
+		text-align: center;
+		width: 70%;
+		padding: 10px 20px;
+		margin: 0 auto;
+		border-bottom: 1px solid $c-orange;
+
+		@media (min-width: 992px) {
+			border-bottom: none;
+			width: 25%;
+			padding: 50px 60px;
+			transition: 1s ease-in;
+
+			&:hover {
+			box-shadow: inset 2px 2px 20px $c-orange;
+			border-radius: 20px;
+			}
+		}
+
+		&-img {
+			border: none;
+
+			@media (min-width: 1200px) {
+				border: 1px solid $c-gray;
+				border-radius: 50%;
+				padding: 50px;
+			}
+		}
+
+		&-title {
+			@include font($ff-OS-sb, 13);
+			color: $c-text;
+			margin-top: 30px;
+			margin-bottom: 20px;
+		}
+
+		&-text {
+			@include font($ff-OS-l, 12);
+			color: $c-text;
+		}
+	}
+	
+}

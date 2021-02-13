@@ -1,0 +1,62 @@
+.newsletter {
+	text-align: center;
+	padding: 40px 10px;
+
+	@media (min-width: 992px) {
+		padding: 50px 100px;
+		word-spacing: 10px;
+	}
+
+	@media (min-width: 1200px) {
+		padding: 100px 140px;
+		word-spacing: 30px;
+	}
+
+	&Wrapper {
+		background-image: $background, url(../images/newsletter/newsletterBG.png);
+	}
+
+	&__email {
+		width: 90%;
+		height: 50px;
+		border-radius: 10px;
+		border: none;
+		padding-left: 15px;
+		margin-bottom: 20px;
+		@include font($ff-OS-l, 15);
+
+		&:hover {
+			box-shadow: inset 2px 2px 5px $c-gray;
+		}
+
+		@media (min-width: 992px) {
+			width: 50%;
+			padding-left: 25px;
+			margin-bottom: 0;
+			@include font($ff-OS-l, 13);
+		}
+	}
+
+	&__subscribe {
+		width: 50%;
+		height: 55px;
+		border: none;
+		border-radius: 10px;
+		background-color: $c-orange;
+		color: white;
+		@include font($ff-OS-sb, 18);
+		cursor: pointer;
+		transition: all 1s cubic-bezier(0.165, 0.84, 0.44, 1);
+
+		@media (min-width: 992px) {
+			width: 30%;
+			@include font($ff-OS-sb, 13);
+		}
+
+		&:hover {
+			transform: translate(10px);
+			box-shadow: 0 5px 15px rgba(0, 0, 0, 0.5);
+			background-color: #b35e30
+		}
+	}
+}

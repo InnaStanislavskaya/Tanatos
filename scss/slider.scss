@@ -1,0 +1,123 @@
+.header {
+	display: flex;
+	flex-direction: row;
+	justify-content: space-between;
+	align-items: center;
+	padding-top: 50px;
+
+	&__menu {
+		@include font($ff-OS-l, 20);
+		display: flex;
+		align-items: center;
+
+		@media (min-width: 1200px) {
+			@include font($ff-OS-l, 15);
+		}
+
+		&-icon {
+			font-size: 40px;
+			margin-left: 20px;
+			transition: 1s linear;
+
+			@media (min-width: 1200px) {
+				font-size: 25px;
+				margin-left: 10px;
+			}
+
+			&:hover {
+				color: $c-orange;
+				transform: scale(1.5);
+			}
+		}
+	}
+}
+
+.slider {
+	padding: 10px 0;
+	text-align: center;
+
+	@media (min-width: 1200px) {
+		padding: 100px 170px 50px;	
+	}
+
+	&Wrapper {
+		background-image: $background, url(../images/slider/slider.png);
+		background-position: center;
+		background-repeat: no-repeat;
+		color: white;
+	}
+
+	.h1 {
+		@include font($ff-OS-exb, 40);
+
+		@media (min-width: 1200px) {
+			@include font($ff-OS-exb, 70);	
+		}
+	}
+
+	&__text {
+		@include font($ff-OS-l, 25);
+		margin-top: -40px;
+
+		@media (min-width: 1200px) {
+			@include font($ff-OS-l, 20);
+		}
+	}
+
+	&__button {
+		margin-top: 30px;
+		margin-bottom: 50px;
+
+		@media (min-width: 992px) {
+			margin-bottom: 100px;
+		}
+
+		@media (min-width: 1200px) {
+			margin-top: 70px;
+			margin-bottom: 170px;
+		}
+
+		&-hireUs, &-ourWorks {
+			border: 1px solid $c-gray;
+			border-radius: 7px;
+			width: 80%;
+			padding: 20px 0;
+			margin: 10px 0;
+			@include font($ff-OS-sb, 15);
+			color: white;
+			background-color: transparent;
+			cursor: pointer;
+
+			background-image: linear-gradient(to left,transparent,transparent 50%,$c-orange 50%,$c-orange);
+			transition: all 1s ease-in;
+			background-position: 100% 0;
+			background-size: 200% 100%;
+
+			@media (min-width: 992px) {
+				width: 200px;
+				margin: 0 15px;
+			}
+
+			@media (min-width: 1200px) {
+				width: 200px;
+				padding: 17px 0;
+				@include font($ff-OS-sb, 13);
+			}
+
+			&:hover {
+				background-color: transparent;
+				background-position: 0 0;
+				
+			}
+		}
+	}
+	
+	&__down {
+		cursor: pointer;
+
+		&-icon {
+			animation: pulsing 2s infinite;
+		}
+	}
+}
+

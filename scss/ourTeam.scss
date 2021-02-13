@@ -1,0 +1,88 @@
+.ourTeam {
+	@media (min-width: 992px) {
+		display: flex;
+		flex-wrap: wrap;
+		justify-content: space-between;
+		margin-top: 60px;
+	}
+
+	@media (min-width: 1200px) {
+		flex-wrap: nowrap;
+		margin-top: 130px;
+	}
+
+	&__item {
+		text-align: center;
+		padding-bottom: 10px;
+		margin-top: 30px;
+		border-bottom: 1px solid $c-orange;
+
+		@media (min-width: 992px) {
+			width: 40%;
+			margin: 30px 20px;
+			border-bottom: none;
+		}
+
+		@media (min-width: 1200px) {
+			width: 25%;	
+			margin: 0 0;
+			padding: 0 15px;
+			border-bottom: none;
+		}
+
+		&:hover {
+			.ourTeam__item-photo, .ourTeam__item-social {
+				filter: none;
+			}
+			.ourTeam__item-name, .ourTeam__item-text {
+				color: black;
+			}
+			.ourTeam__item-photo {
+				transform: matrix(1.05, 0, 0, 1.05, 0, -10);
+				border-color: $c-orange;
+				
+			}
+		}
+
+		&-photo {
+			filter: grayscale(100%);
+			transition: all .4s ease-in;
+			border-bottom: 4px solid transparent;
+			border-radius: 7px;
+		}
+
+		&-social {
+			display: flex;
+			justify-content: center;
+			filter: grayscale(100%);
+			margin: 0 -5px;
+			transition: .4s ease-in;
+
+			& div {
+				margin: 20px 5px;
+			}
+		}
+
+		&-name {
+			@include font($ff-OS-sb, 19);
+			color: $c-gray2;
+			transition: .4s ease-in;
+		}
+
+		&-text {
+			@include font($ff-OS-l, 15);
+			color: $c-gray2;
+			transition: .4s ease-in;
+
+			@media (min-width: 1200px) {
+				@include font($ff-OS-l, 12);
+			}
+		}
+	}
+}
+
+
+
+
+
+

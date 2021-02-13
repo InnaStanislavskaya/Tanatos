@@ -1,0 +1,88 @@
+@import "_variables";
+@import "slider";
+@import "services";
+@import "newsletter";
+@import "ourTeam";
+
+body {
+	margin: 0;
+}
+*{
+    box-sizing: border-box;
+}
+
+.container {
+	width: 100%;
+	margin-left: auto;
+	margin-right: auto;
+	padding-left: 15px;
+	padding-right: 15px;
+
+	@media (min-width: 576px) {
+		max-width: 540px;
+	}
+	@media (min-width: 768px) {
+		max-width: 720px;
+	}
+	@media (min-width: 992px) {
+		max-width: 960px;
+	}
+	@media (min-width: 1200px) {
+		max-width: 1140px;
+	}
+	@media (min-width: 1440px) {
+		max-width: 1200px;
+	}
+}
+.marker {
+	color: $c-orange;
+}
+
+.headline {
+	text-align: center;
+	margin-top: 15px;
+
+	@media (min-width: 1200px) {
+		text-align: center;
+		margin-top: 100px;
+		padding: 0 340px;
+	}
+
+	&__topic {
+		@include font($ff-OS-sb, 30);
+	}
+
+	&__description {
+		@include font($ff-OS-l, 20);
+		margin-top: 15px;
+		line-height: 20px;
+
+		@media (min-width: 1200px) {
+			@include font($ff-OS-l, 15);
+		}
+	}
+}
+
+.circular {
+	@media (min-width: 768px) {
+		display: flex;
+		justify-content: center;
+		margin: 90px 0;
+
+		& div {
+			background-color: $c-gray2;
+			width: 10px;
+			height: 10px;
+			border-radius: 50%;
+			margin: 0 5px;
+			animation-name: bounce_circular;
+			animation-duration: 4s;	
+		}
+
+		@for $i from 1 through 4 {
+			.circular_#{$i} {
+				animation-delay: 4s * $i;
+			}
+		}
+	}
+}
