@@ -42,6 +42,7 @@
 
 	&Wrapper {
 		background-image: $background, url(../images/slider/slider.png);
+		background-size: cover;
 		background-position: center;
 		background-repeat: no-repeat;
 		color: white;

@@ -23,6 +23,8 @@
 		@include font($ff-OS-l, 13);
 		border-radius: 10px;
 		border: none;
+		outline: none;
+		transition: 1s;
 
 		@media (min-width: 992px) {
 			width: 48%;	
@@ -40,7 +42,9 @@
 		margin-bottom: 30px;
 		border-radius: 10px;
 		border: none;
+		outline: none;
 		@include font($ff-OS-l, 13);
+		transition: 1s;
 
 		&:hover {
 			box-shadow: inset 2px 2px 5px $c-gray;
@@ -71,25 +75,60 @@
 
 	&Wrapper {
 		background-image: $background, url(../images/contact/bg.png);
+		background-size: cover;
 		color: white;
 		background-position: center;
 		background-repeat: no-repeat;
 	}
 
 	&__social {
+		display: flex;
+		justify-content: space-between;
+		margin: 40px 5px 0;
 
 		@media (min-width: 992px) {
-			word-spacing: 15px;
+			margin: 0;
 		}
 
-		&-icon {
+		&-facebook {
+			@include icon(#205b9f, 40);
 			transition: .4s linear;
-			margin: 40px 5px 0;
-
-			@media (min-width: 992px) {
-				margin: 0;
+			&:hover {
+				transform: scale(1.1);
 			}
+		}
 
+		&-twitter {
+			@include icon(#00ace3, 40);
+			margin-left: 15px;
+			transition: .4s linear;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-google {
+			@include icon(#ff3921, 40);
+			margin-left: 15px;
+			transition: .4s linear;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-dribbble {
+			@include icon(#ff72a5, 40);
+			margin-left: 15px;
+			transition: .4s linear;
+			&:hover {
+				transform: scale(1.1);
+			}
+		}
+
+		&-behance {
+			@include icon(#009bd5, 40);
+			margin-left: 15px;
+			transition: .4s linear;
 			&:hover {
 				transform: scale(1.1);
 			}

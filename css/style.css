@@ -69,6 +69,7 @@
 }
 .sliderWrapper {
   background-image: linear-gradient(to top, rgba(48, 64, 80, 0.8), rgba(48, 64, 80, 0.8)), url(../images/slider/slider.png);
+  background-size: cover;
   background-position: center;
   background-repeat: no-repeat;
   color: white;
@@ -235,6 +236,8 @@
   margin-bottom: 20px;
   font-family: "OpenSans-Light", sans-serif;
   font-size: 15px;
+  transition: 1s;
+  outline: none;
 }
 .newsletter__email:hover {
   box-shadow: inset 2px 2px 5px #65696f;
@@ -384,6 +387,8 @@
   font-size: 13px;
   border-radius: 10px;
   border: none;
+  outline: none;
+  transition: 1s;
 }
 @media (min-width: 992px) {
   .contact__email, .contact__subject {
@@ -400,8 +405,10 @@
   margin-bottom: 30px;
   border-radius: 10px;
   border: none;
+  outline: none;
   font-family: "OpenSans-Light", sans-serif;
   font-size: 13px;
+  transition: 1s;
 }
 .contact__message:hover {
   box-shadow: inset 2px 2px 5px #65696f;
@@ -430,25 +437,63 @@
 }
 .contactWrapper {
   background-image: linear-gradient(to top, rgba(48, 64, 80, 0.8), rgba(48, 64, 80, 0.8)), url(../images/contact/bg.png);
+  background-size: cover;
   color: white;
   background-position: center;
   background-repeat: no-repeat;
 }
-@media (min-width: 992px) {
-  .contact__social {
-    word-spacing: 15px;
-  }
-}
-.contact__social-icon {
-  transition: 0.4s linear;
+.contact__social {
+  display: flex;
+  justify-content: space-between;
   margin: 40px 5px 0;
 }
 @media (min-width: 992px) {
-  .contact__social-icon {
+  .contact__social {
     margin: 0;
   }
 }
-.contact__social-icon:hover {
+.contact__social-facebook {
+  color: #205b9f;
+  font-size: 40px;
+  transition: 0.4s linear;
+}
+.contact__social-facebook:hover {
+  transform: scale(1.1);
+}
+.contact__social-twitter {
+  color: #00ace3;
+  font-size: 40px;
+  margin-left: 15px;
+  transition: 0.4s linear;
+}
+.contact__social-twitter:hover {
+  transform: scale(1.1);
+}
+.contact__social-google {
+  color: #ff3921;
+  font-size: 40px;
+  margin-left: 15px;
+  transition: 0.4s linear;
+}
+.contact__social-google:hover {
+  transform: scale(1.1);
+}
+.contact__social-dribbble {
+  color: #ff72a5;
+  font-size: 40px;
+  margin-left: 15px;
+  transition: 0.4s linear;
+}
+.contact__social-dribbble:hover {
+  transform: scale(1.1);
+}
+.contact__social-behance {
+  color: #009bd5;
+  font-size: 40px;
+  margin-left: 15px;
+  transition: 0.4s linear;
+}
+.contact__social-behance:hover {
   transform: scale(1.1);
 }
 
@@ -591,6 +636,10 @@ body {
     align-items: center;
     justify-content: space-between;
   }
+}
+
+a {
+  text-decoration: none;
 }
 
 /*# sourceMappingURL=style.css.map */
