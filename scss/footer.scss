@@ -1,0 +1,23 @@
+.footer {
+	color: white;
+	text-align: center;
+	padding: 20px 0;
+
+	@media (min-width: 992px) {
+		padding: 50px 0;
+		display: flex;
+		justify-content: space-between;
+	}
+
+	&Wrapper {
+		background-image: url(../images/footer/bg.png);
+	}
+
+	&__text {
+		@include font($ff-OS-l, 15);
+
+		&-logo {
+			vertical-align: middle;
+		}
+	}
+}

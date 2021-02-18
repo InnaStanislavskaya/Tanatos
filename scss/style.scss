@@ -3,6 +3,8 @@
 @import "services";
 @import "newsletter";
 @import "ourTeam";
+@import "contact";
+@import "footer";
 
 body {
 	margin: 0;
@@ -40,12 +42,20 @@ body {
 
 .headline {
 	text-align: center;
-	margin-top: 15px;
+	margin-top: 40px;
 
 	@media (min-width: 1200px) {
 		text-align: center;
 		margin-top: 100px;
 		padding: 0 340px;
+	}
+
+	&--design {
+		padding-top: 40px;
+
+		@media (min-width: 1200px) {
+			padding-top: 100px;
+		}
 	}
 
 	&__topic {
@@ -86,3 +96,13 @@ body {
 		}
 	}
 }
+
+.flexBox {
+
+	@media (min-width: 992px) {
+		display: flex;
+		align-items: center;
+		justify-content: space-between;
+	}
+}
+
